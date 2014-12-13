@@ -1,0 +1,31 @@
+{
+  "objects": [
+    {"id": "obj1", "operator": "audioin"},
+    {"id": "obj2", "operator": "const", "value": 400.0},
+    {"id": "obj3", "operator": "const", "value": 0.707107},
+    {"id": "obj4", "operator": "audioout", "inputs": ["obj26"]},
+    {"id": "obj5", "operator": "z^-1", "inputs": ["obj24"]},
+    {"id": "obj6", "operator": "z^-1", "inputs": ["obj27"]},
+    {"id": "obj7", "operator": "const", "value": 3.14159},
+    {"id": "obj8", "operator": "samplerate"},
+    {"id": "obj9", "operator": "div", "inputs": ["obj7", "obj8"]},
+    {"id": "obj10", "operator": "mul", "inputs": ["obj2", "obj9"]},
+    {"id": "obj11", "operator": "tan", "inputs": ["obj10"]},
+    {"id": "obj12", "operator": "const", "value": 1.0},
+    {"id": "obj13", "operator": "div", "inputs": ["obj12", "obj3"]},
+    {"id": "obj14", "operator": "add", "inputs": ["obj11", "obj13"]},
+    {"id": "obj15", "operator": "mul", "inputs": ["obj11", "obj14"]},
+    {"id": "obj16", "operator": "const", "value": 1.0},
+    {"id": "obj17", "operator": "add", "inputs": ["obj16", "obj15"]},
+    {"id": "obj18", "operator": "div", "inputs": ["obj11", "obj17"]},
+    {"id": "obj19", "operator": "mul", "inputs": ["obj5", "obj14"]},
+    {"id": "obj20", "operator": "add", "inputs": ["obj6", "obj19"]},
+    {"id": "obj21", "operator": "sub", "inputs": ["obj1", "obj20"]},
+    {"id": "obj22", "operator": "mul", "inputs": ["obj21", "obj18"]},
+    {"id": "obj23", "operator": "add", "inputs": ["obj5", "obj22"]},
+    {"id": "obj24", "operator": "add", "inputs": ["obj23", "obj22"]},
+    {"id": "obj25", "operator": "mul", "inputs": ["obj23", "obj11"]},
+    {"id": "obj26", "operator": "add", "inputs": ["obj25", "obj6"]},
+    {"id": "obj27", "operator": "add", "inputs": ["obj26", "obj25"]}
+  ]
+}
