@@ -353,7 +353,7 @@ let () = (
     and wav_handle = In_channel.create ~binary:true "test.wav" in
     let wav_frames = get_frames wav_handle     (* フレーム数取得 *)
     and alsa_pcm = open_default_pcm            (* オーディオデバイスを開く *)
-    and alsa_buffer = String.create (2*2*1024)  (* PCMデータ転送用バッファ *)
+    and alsa_buffer = String.create (2*2*1024) (* PCMデータ転送用バッファ *)
     and wav_buffer = Buffer.create (2*2*1024)  (* WAVデータ読み込み用バッファ *) in
 
     let rec audio_process remain_frames z_in_ch1 z_in_ch2 = (
