@@ -359,7 +359,7 @@ let () = (
     let rec audio_process remain_frames z_in_ch1 z_in_ch2 = (
         (* WAVファイルからデータを1ブロック読み込み *)
         Buffer.clear wav_buffer;
-        let block_size = if remain_frames >= 1024 then 1024 else remain_frames in
+        let block_size = if remain_frames > 1024 then 1024 else remain_frames in
         Buffer.add_channel wav_buffer wav_handle (block_size*4);
 
         (* ブロック処理 *)
